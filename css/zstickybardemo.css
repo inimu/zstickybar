@@ -1,0 +1,147 @@
+body {
+	margin: 0; padding: 0;
+	font-family: Ubuntu, Helvetica, "Segoe UI", Calibri, "Trebuchet MS", Arial, sans-serif;
+}
+a {
+	color: #69c;
+	text-decoration: none;
+}
+a:visited {
+	color: #6cb;
+}
+a:hover {
+	color: #39f;
+}
+pre, textarea {
+	overflow: auto; white-space: pre; word-wrap: normal; font-family: monospace;
+	border-style: solid;
+	border-width: 1px;
+}
+textarea {
+	box-sizing: border-box; -moz-box-sizing: border-box; padding: 2px 6px;
+}
+#zsbd-wrapper,
+#zsbd-header,
+#zsbd-content,
+#zsbd-left-sidebar,
+#zsbd-right-sidebar,
+#zsbd-clear,
+#zsbd-footer,
+#ZZ {
+	overflow: hidden;
+}
+#zsbd-wrapper {
+	/*min-width: 1000px; max-width: 1100px; margin: 20px auto;*/
+	/*width: 100%;*/
+}
+#zsbd-header {
+	font-family: monospace; font-size: 3em; font-weight: bold; text-align: center;
+	min-height: 100px;
+	border-style: solid;
+	border-width: 8px 0 0;
+	width: 1100px; margin: 50px auto;
+}
+#zsbd-header-content {
+	display: block;
+	padding: 150px 0;
+}
+#zsbd-main {
+	/*width: 100%;*/
+	width: 1100px; margin: 20px auto;
+}
+#zsbd-content {
+	width: 60%;
+}
+#zsbd-left-sidebar, #zsbd-right-sidebar {
+	width: 20%;
+}
+#zsbd-content, #zsbd-left-sidebar, #zsbd-right-sidebar {
+	box-sizing: border-box; -moz-box-sizing: border-box; float: left; padding: 10px;
+	/*min-height: 1000px;*/
+	text-align: justify;
+}
+#zsbd-zstickybar-code-box,
+#zsbd-pagesource-box {
+	box-sizing: border-box; -moz-box-sizing: border-box; width: 100%; padding: 2px 6px;
+}
+#zsbd-zstickybar-code-box {
+	max-height: 540px;
+}
+#zsbd-pagesource-box-left, #zsbd-pagesource-box-right {
+	font-size: 65%;
+	line-height: 1;
+	overflow: hidden;
+}
+#zsbd-footer {
+	text-align: center;
+	width: 100%; margin: 50px auto 0;
+}
+#zsbd-footer-content {
+	display: block;
+	padding: 100px 0;
+}
+.zsbd-content-separator {
+	width: 50%;
+	margin: 2em auto 3em;
+	border: 1px solid rgba(128, 128, 128, 0.25);
+}
+.zsbd-clear {
+	clear: both;
+	margin: 20px auto;
+}
+
+
+
+/* LIGHT COLOR */
+body {
+	background: #fffff0; color: #555;
+}
+pre, textarea {
+	box-shadow: inset 0 2px 6px rgba(0,0,0,0.25);
+}
+pre {
+	border-color: #abc; background: #e8ecf0; color: #444;
+}
+textarea {
+	border-color: #cc9; background: #fffff8; color: #822;
+}
+pre#zsbd-zstickybar-code-box {
+	background: #e8f0f8;
+}
+#zsbd-wrapper {
+	/*background: #eee;*/
+}
+#zsbd-header {
+	border-color: #669900; color: #fff; text-shadow: 0 0 3px #666;
+	box-shadow: 0 0 10px rgba(0,0,0,0.25);
+	background-color: #aadd00;
+	background-image: linear-gradient(to right,  #aadd00 0%,#005566 100%);
+	background-image: -moz-linear-gradient(left,  #aadd00 0%, #005566 100%);
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0%,#aadd00), color-stop(100%,#005566));
+	background-image: -webkit-linear-gradient(left,  #aadd00 0%,#005566 100%);
+	background-image: -o-linear-gradient(left,  #aadd00 0%,#005566 100%);
+	background-image: -ms-linear-gradient(left,  #aadd00 0%,#005566 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aadd00', endColorstr='#005566',GradientType=1 );
+	background-image: url(https://lh6.googleusercontent.com/-Uu228u9Bwsc/UzcxukkH1zI/AAAAAAAALbY/PjDkLCkTkpY/s0/floral-spring-green-blue-light-bright-flower-red-white.jpg);
+	background-repeat: no-repeat;
+	background-position: center center; 
+	background-attachment: fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+}
+#zsbd-content {
+	/*background: #fff;*/
+}
+#zsbd-left-sidebar, #zsbd-right-sidebar {
+	/*background: #f6f6f6;*/
+}
+#zsbd-footer {
+	background: #444; color: #ccc;
+}
+#zsbd-pagesource-box-left, #zsbd-pagesource-box-right {
+	color: #999;
+}
+
