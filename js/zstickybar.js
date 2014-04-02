@@ -31,12 +31,13 @@
  * To avoid the following (unnecessary and unreliable) paths detection,
  * it is better to set the default path variables to the actual,
  * hard-coded full paths (where this app is hosted), e.g.:
- * var ZSB_APP_PATH = ZSB_APP_PATH || 'http://zstickybar.googlecode.com/svn/trunk/js/zstickybar.js';
- * var ZSB_APP_ROOT_PATH = ZSB_APP_ROOT_PATH || 'http://zstickybar.googlecode.com/svn/trunk/';
- * var ZSB_APP_JS_PATH = ZSB_APP_JS_PATH || 'http://zstickybar.googlecode.com/svn/trunk/js/';
- * var ZSB_APP_CSS_PATH = ZSB_APP_CSS_PATH || 'http://zstickybar.googlecode.com/svn/trunk/css/';
- * var ZSB_APP_IMG_PATH = ZSB_APP_IMG_PATH || 'http://zstickybar.googlecode.com/svn/trunk/img/';
+ * var ZSB_APP_PATH = ZSB_APP_PATH || 'http://inimu.github.io/zstickybar/js/zstickybar.js';
+ * var ZSB_APP_ROOT_PATH = ZSB_APP_ROOT_PATH || 'http://inimu.github.io/zstickybar/';
+ * var ZSB_APP_JS_PATH = ZSB_APP_JS_PATH || 'http://inimu.github.io/zstickybar/js/';
+ * var ZSB_APP_CSS_PATH = ZSB_APP_CSS_PATH || 'http://inimu.github.io/zstickybar/css/';
+ * var ZSB_APP_IMG_PATH = ZSB_APP_IMG_PATH || 'http://inimu.github.io/zstickybar/img/';
  */
+/*
 var ZSB_APP_PATH = ZSB_APP_PATH || (function(){
 	var APPURL = '', APPID = 'zsb-app', APPFILENAME = 'zstickybar.js', APPCHECKSTR = 'zStickyBar version 1.0 (2014.04)';
 	if (document.getElementById('zsb-app')) {
@@ -72,6 +73,12 @@ var ZSB_APP_ROOT_PATH = ZSB_APP_ROOT_PATH || ZSB_APP_PATH.split('/').slice(0, -1
 var ZSB_APP_JS_PATH = ZSB_APP_JS_PATH || ZSB_APP_ROOT_PATH + 'js/';
 var ZSB_APP_CSS_PATH = ZSB_APP_CSS_PATH || ZSB_APP_ROOT_PATH + 'css/';
 var ZSB_APP_IMG_PATH = ZSB_APP_IMG_PATH || ZSB_APP_ROOT_PATH + 'img/';
+*/
+var ZSB_APP_PATH = ZSB_APP_PATH || 'http://inimu.github.io/zstickybar/js/zstickybar.js';
+var ZSB_APP_ROOT_PATH = ZSB_APP_ROOT_PATH || 'http://inimu.github.io/zstickybar/';
+var ZSB_APP_JS_PATH = ZSB_APP_JS_PATH || 'http://inimu.github.io/zstickybar/js/';
+var ZSB_APP_CSS_PATH = ZSB_APP_CSS_PATH || 'http://inimu.github.io/zstickybar/css/';
+var ZSB_APP_IMG_PATH = ZSB_APP_IMG_PATH || 'http://inimu.github.io/zstickybar/img/';
 /* PATH DETECTION end */
 
 
