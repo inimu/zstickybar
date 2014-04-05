@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8" />
-<title>zStickyBar Widget Demo | inimu.com</title>
-<link rel="stylesheet" href="css/zstickybardemo.css" type="text/css" />
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>zStickyBar Widget Demo</title>
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/zstickybardemo.css" type="text/css" />
+	</head>
+	<body>
 
 <div id="zsbd-wrapper">
 	<div id="zsbd-header"></div>
@@ -40,18 +42,24 @@
 	<div id="zsbd-footer"></div>
 </div>
 
+
+
+
+
 <div id="zsbd-zstickybar-widget">
+
 <!-- ~~~~~~~~~~~~~~~ zStickyBar ~~~~~~~~~~~~~~~ -->
 
 <!-- Do not modify anything other than contents (within "begin" to "end" area) -->
 
-<div id="zsb-container">
-	<div id="zsb-top-bar">
-		<div id="zsb-top-left-box">
+<div id="zsb-wrapper">
+	<div id="zsb-bar-top">
+
+		<ul id="zsb-content-top-left">
 			<!-- top left content begin -->
 
-			<div class="zsb-menu-hover">
-				<a href="http://inimu.com" class="zsb-homepage">inimu.com</a>
+			<li class="zsb-menu-hover">
+				<a href="http://inimu.com" class="zsb-homepage">Menubar Item</a>
 				<ul>
 					<li>
 						<a href="http://inimu.com/komputer/">Blog Tekno</a>
@@ -117,40 +125,92 @@
 					</li>
 					<li class="zsb-menu-separator"></li>
 					<li>
-						<div class="zsb-center">© 2014 inimu.com</div>
+						<div class="zsb-center">A Text Menubox Item</div>
 					</li>
 				</ul>
-			</div>
-			<div class="zsb-menu-hover">
-				<a>TRENDING NOW!</a>
+			</li>
+
+			<li class="zsb-menu-hover">
+				<a>TRENDING</a>
 				<ul>
 					<li>
 						<div id="inimu-feedjit-popular-box">
-							<script type="text/javascript" src="http://feedjit.com/popPages/?wid=7529127e55ea50ba&amp;pid=961f165dae0b2b03&amp;ww=300&amp;wh=&amp;hl=1"></script>
+							<table cellspacing="1" cellpadding="1" class="FJ_TopTable" id="FJ_PP"><tbody>
+							<tr>
+								<td colspan="2"><div id="FJTITLE1_pop" class="FJ_Heading"> Popular Pages Today </div></td>
+							</tr><tr>
+								<td style="vertical-align: top;" class="FJ_Line"> &nbsp;1.&nbsp;</td>
+								<td class="FJ_Line"><a title="15.49">Charisma</a>&nbsp;<span style="font-size: 9px;">15.49%</span></td>
+							</tr><tr>
+								<td style="vertical-align: top;" class="FJ_Line"> &nbsp;2.&nbsp;</td>
+								<td class="FJ_Line"><a title="15.40">zStickyBar Widget Demo by inimu.com</a>&nbsp;<span style="font-size: 9px;">15.40%</span></td>
+							</tr><tr>
+								<td style="vertical-align: top;" class="FJ_Line"> &nbsp;3.&nbsp;</td>
+								<td class="FJ_Line"><a title="15.31">zStickyBar Widget Demo by inimu.com</a>&nbsp;<span style="font-size: 9px;">15.31%</span></td>
+							</tr><tr>
+								<td style="vertical-align: top;" class="FJ_Line"> &nbsp;4.&nbsp;</td>
+								<td class="FJ_Line"><a title="12.06">SOCH The Magazine</a>&nbsp;<span style="font-size: 9px;">12.06%</span></td>
+							</tr><tr>
+								<td style="vertical-align: top;" class="FJ_Line"> &nbsp;5.&nbsp;</td>
+								<td class="FJ_Line"><a title="8.86">Gaz Engineering | Gaz-Micro.Com</a>&nbsp;<span style="font-size: 9px;">8.86%</span></td>
+							</tr><tr>
+								<td style="vertical-align: top;" class="FJ_Line"> &nbsp;6.&nbsp;</td>
+								<td class="FJ_Line"><a title="8.67">Iron &amp; Steel Price Of India</a>&nbsp;<span style="font-size: 9px;">8.67%</span></td>
+							</tr><tr>
+								<td style="vertical-align: top;" class="FJ_Line"> &nbsp;7.&nbsp;</td>
+								<td class="FJ_Line"><a title="7.24">theofficialwebsite.in | Add Your Business To Avoid Confusion.</a>&nbsp;<span style="font-size: 9px;">7.24%</span></td>
+							</tr><tr>
+								<td style="vertical-align: top;" class="FJ_Line"> &nbsp;8.&nbsp;</td>
+								<td class="FJ_Line"><a title="6.63">- www.admir.tv</a>&nbsp;<span style="font-size: 9px;">6.63%</span></td>
+							</tr><tr>
+								<td style="vertical-align: top;" class="FJ_Line"> &nbsp;9.&nbsp;</td>
+								<td class="FJ_Line"><a title="5.43">Untitled Document</a>&nbsp;<span style="font-size: 9px;">5.43%</span></td>
+							</tr><tr>
+								<td style="vertical-align: top;" class="FJ_Line"> &nbsp;10.&nbsp;</td>
+								<td class="FJ_Line"><a title="4.92">Joes Jeans - 9 Zip Skinny Ankle in Sierra (Sierra Grey) - Apparel</a>&nbsp;<span style="font-size: 9px;">4.92%</span></td>
+							</tr>
+							</tbody></table>
 						</div>
 					</li>
 				</ul>
-			</div>
+			</li>
 
 			<!-- top left content end -->
-		</div>
-		<div id="zsb-top-center-box">
+		</ul>
+
+		<ul id="zsb-content-top-center">
 			<!-- top center content begin -->
 
 
 
 			<!-- top center content end -->
-		</div>
-		<div id="zsb-top-right-box">
+		</ul>
+
+		<ul id="zsb-content-top-right">
 			<!-- top right content begin -->
+			
+			<li>
+				<div id="zsb-follow-box"></div>
+			</li>
 
-			<div id="zsb-follow-box"></div>
-
-			<div class="zsb-menu-click">
-				<a class="zsb-menu-click-toggler" style="color:#fff; background: #9c0; line-height: 0; padding: 10px;">Log in</a>
+			<li class="zsb-menu-click">
+				<a class="zsb-menu-click-toggler" style="color: transparent; padding-right: 0; padding-left: 0;">
+					<span style="font-weight: bold; color: #fff; background: #3cf; padding: 3px 12px 3px 15px; position: relative; left: 8px;">Log in</span>
+				</a>
 				<ul>
 					<li>
-						<form id="login-form" style="padding: 10px;" onsubmit="(function(){ var NAME = document.getElementById('login-name'); var PWD = document.getElementById('login-password'); if ( (NAME.value) && (PWD.value) ) { alert('Welcome back, '+NAME.value+'!') } else { alert('Please complete the log in form!'); if (NAME.value) { PWD.focus(); } else { NAME.focus(); } } })(); return false;">
+						<form id="login-form" style="padding: 10px;" onsubmit="
+								(function(){
+									var NAME = document.getElementById('login-name');
+									var PWD = document.getElementById('login-password');
+									if ( (NAME.value) && (PWD.value) ) {
+										alert('Welcome back, '+NAME.value+'!')
+									} else {
+										alert('Please complete the log in form!'); if (NAME.value) { PWD.focus(); } else { NAME.focus(); }
+									}
+								})();
+								return false;
+							">
 							<table>
 								<tr>
 									<td style="padding: 10px;">
@@ -177,19 +237,24 @@
 						</form>
 					</li>
 				</ul>
-			</div>
+			</li>
 
-			<div id="zsb-top-bar-control"></div>
+			<li>
+				<a id="zsb-bar-control-top"></a>
+			</li>
 
 			<!-- top right content end -->
-		</div>
+		</ul>
+
 	</div>
-	<div id="zsb-bottom-bar">
-		<div id="zsb-bottom-left-box">
+
+	<div id="zsb-bar-bottom">
+
+		<ul id="zsb-content-bottom-left">
 			<!-- bottom left content begin -->
 
-			<div class="zsb-menu-hover">
-				<a>Menu title</a>
+			<li class="zsb-menu-hover">
+				<a>A Menu Name</a>
 				<ul>
 					<li>
 						<a href="http://inimu.com/komputer/">Blog Tekno</a>
@@ -199,6 +264,9 @@
 					</li>
 					<li>
 						<a href="http://inimu.com/bebas/">Blog Bebas</a>
+					</li>
+					<li>
+						<a>Just another menubox item</a>
 					</li>
 					<li class="zsb-menu-separator"></li>
 					<li>
@@ -250,28 +318,36 @@
 						<div><small>© 2014 inimu.com</small></div>
 					</li>
 				</ul>
-			</div>
+			</li>
 
 			<!-- bottom left content end -->
-		</div>
-		<div id="zsb-bottom-center-box">
+		</ul>
+
+		<ul id="zsb-content-bottom-center">
 			<!-- bottom center content begin -->
 
-			<iframe src="https://lh3.googleusercontent.com/-5i5Gxa8yVaY/Uzlo-UJW6oI/AAAAAAAALcA/Wd7bVt2mCE0/s0/smiley-face-banner.jpg" scrolling="no" allowtransparency="true" style="border:0; width: 728px; height: 90px; overflow: hidden;"></iframe>
+			<li>
+				<div style="
+					background: #69c url(http://lh3.googleusercontent.com/-5i5Gxa8yVaY/Uzlo-UJW6oI/AAAAAAAALcA/Wd7bVt2mCE0/s0/smiley-face-banner.jpg);
+					border: 0; width: 728px; height: 90px; overflow: hidden;
+					"></div>
+			</li>
 
 			<!-- bottom center content end -->
-		</div>
-		<div id="zsb-bottom-right-box">
+		</ul>
+
+		<ul id="zsb-content-bottom-right">
 			<!-- bottom right content begin -->
 
-			<div class="zsb-menu-click">
+			<li class="zsb-menu-click">
 				<a class="zsb-menu-click-toggler">Chat Box</a>
 				<ul>
 					<li>
 						<table class="zsb-table-menu">
 							<tr>
 								<td>
-									<a class="zsb-menu-click-toggler" href="http://inimu.cbox.ws" title="Open chat box in new window" onclick="zsb_WindowOpenWrite('inimu-cboxdiv','Chat Box | inimu.com','','','width=500,height=500'); return false;">Open in new window Δ</a>
+									<a class="zsb-menu-click-toggler" href="http://inimu.cbox.ws" title="Open chat box in new window"
+										onclick="zsb_WindowOpenWrite('inimu-cboxdiv','Chat Box | inimu.com','','','width=500,height=500'); return false;">Open in new window Δ</a>
 								</td>
 								<td>
 									<a class="zsb-menu-click-toggler zsb-close-button zsb-inline" title="Close"></a>
@@ -286,60 +362,61 @@
 						</div>
 					</li>
 				</ul>
-			</div>
+			</li>
 
-			<div id="zsb-bottom-bar-control"></div>
+			<li>
+				<a id="zsb-bar-control-bottom"></a>
+			</li>
 
 			<!-- bottom right content end -->
-		</div>
+		</ul>
+
 	</div>
 	<a id="zsb-bootnode" href="http://inimu.com/widget/zstickybar">zStickyBar Widget by inimu.com</a>
 </div>
 <script id="zsb-option" type="text/javascript">/* <![CDATA[ */
-	/* optional variable begin */
+	var ZSB_APP_OPTIONS = {
+		/* OPTIONAL VARIABLE begin */
 
-	/* general options */
-	var ZSB_COLOR_THEME = 'light';
+		Facebook_URL_ID              : 'inimucom',
+		Twitter_URL_ID               : 'inimu',
+		Google_URL_ID                : '+inimu',
+		Feedburner_URL_ID            : 'inimucom',
 
-	var ZSB_FACEBOOK_URL_ID = 'inimucom';
-	var ZSB_TWITTER_URL_ID = 'inimu';
-	var ZSB_GOOGLE_URL_ID = '+inimu';
-	var ZSB_FEEDBURNER_URL_ID = 'inimucom';
+		Color_Theme                  : 'light',
+		Border_Radius                : '0',
 
-	/* detailed options */
-	var ZSB_OPACITY = '1.0';
-	var ZSB_BORDER_RADIUS = '0';
-	var ZSB_BOXSHADOW_COLOR = 'rgba(0,0,0,0.25)';
-	var ZSB_BACKGROUND_IMAGE = 'linear-gradient(to bottom, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%)';
+		Background_Image             : 'linear-gradient(to bottom,#fff 0,#dfdfdf 50%,#fff 100%)',
 
-	var ZSB_MENUBAR_LINK_HOVER_COLOR = '#fff';
-	var ZSB_MENUBAR_LINK_HOVER_BACKGROUND_COLOR = '#9c0';
-	var ZSB_MENUBAR_LINK_HOVER_BORDER_COLOR = '#9c0';
+		Menubar_Link_Hover_Color                : '#fff',
+		Menubar_Link_Hover_Background_Color     : '#3cf',
+		Menubar_Link_Hover_Border_Color         : '#3cf',
 
-	var ZSB_MENUBOX_BACKGROUND_COLOR = '#fff';
-	var ZSB_MENUBOX_BORDER_COLOR = '#ccd0c4';
+		Menubox_Padding                         : '8px',
+		Menubox_Text_Color                      : '#666',
+		Menubox_Link_Color                      : '#222',
+		Menubox_Background_Color                : '#fff',
+		Menubox_Border_Color                    : '#ccd0c4',
+		Menubox_Accent_Border_Color             : '#3cf',
+		Menubox_Accent_Border_Width             : '3px',
+		Menubox_Link_Hover_Color                : '#fff',
+		Menubox_Link_Hover_Background_Color     : '#3cf',
+		Menubox_Link_Hover_Border_Color         : '#3cf',
 
-	var ZSB_MENUBOX_ACCENT_BORDER_COLOR = '#9c0';
-	var ZSB_MENUBOX_ACCENT_BORDER_WIDTH = '3px';
+		Top_Body_Space_Reserved                 : 'yes',
+		Top_Bar_Width                           : '1150px',
+		Top_Base_Width                          : '100%',
+		Top_Base_Opacity                        : '1.0',
 
-	var ZSB_MENUBOX_LINK_HOVER_COLOR = '#fff';
-	var ZSB_MENUBOX_LINK_HOVER_BACKGROUND_COLOR = '#9c0';
-	var ZSB_MENUBOX_LINK_HOVER_BORDER_COLOR = '#9c0';
+		Bottom_Body_Space_Reserved              : 'no',
+		Bottom_Bar_Width                        : '950px',
+		Bottom_Base_Width                       : '1100px',
+		Bottom_Base_Opacity                     : '0.0',
+		Bottom_Menubar_Link_Color               : '#fff',
+		Bottom_Menubar_Link_Background_Color    : '#444',
 
-	var ZSB_MENUBOX_PADDING = '0.5em 0';
-
-	var ZSB_TOP_BODY_SPACE_RESERVED = 'yes';
-	var ZSB_TOP_BAR_DEFAULT_HIDDEN = 'no';
-	var ZSB_TOP_BAR_WIDTH = '1100px';
-	var ZSB_TOP_BASE_WIDTH = '100%';
-
-	var ZSB_BOTTOM_BODY_SPACE_RESERVED = 'no';
-	var ZSB_BOTTOM_BAR_DEFAULT_HIDDEN = 'yes';
-	var ZSB_BOTTOM_BAR_WIDTH = '1050px';
-	var ZSB_BOTTOM_BASE_WIDTH = '1100px';
-	var ZSB_BOTTOM_BASE_OPACITY = '0.5';
-
-	/* optional variable end */
+		/* OPTIONAL VARIABLE end */
+	}
 /* ]]> */</script>
 <script id="zsb-jquery" type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script id="zsb-app" type="text/javascript" src="//inimu.github.io/zstickybar/js/zstickybar.min.js"></script>
@@ -348,12 +425,17 @@
 
 <!-- ~~~~~~~~~~~~~~~ zStickyBar ~~~~~~~~~~~~~~~ -->
 
+
 </div>
+
+
+
+
 
 <script type="text/javascript" src="js/zoriginnerouterhtml.js"></script>
 <script type="text/javascript" src="js/ztextselectevent.js"></script>
 <script type="text/javascript" src="js/zstickybardemo.js"></script>
 
-</body>
+	</body>
 </html>
 

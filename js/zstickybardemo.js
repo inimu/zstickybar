@@ -12,8 +12,8 @@ var ZSBD_PAGESRC_BOX_ORIGHTML = ZSBD_PAGESRC_BOX.innerHTML;
 var ZSBD_PAGESRC_BOX_LEFT_ORIGHTML = ZSBD_PAGESRC_BOX_LEFT.innerHTML;
 var ZSBD_PAGESRC_BOX_RIGHT_ORIGHTML = ZSBD_PAGESRC_BOX_LEFT.innerHTML;
 
-var ZSBD_SOURCE_LITERAL_CHARS = ['<', '>', '\t', '\n'];
-var ZSBD_SOURCE_HTML_ENTITIES = ['&lt;', '&gt;', '&nbsp;&nbsp;&nbsp;', '<br/>'];
+var ZSBD_SOURCE_LITERAL_CHARS = ['<', '>', '\t'];
+var ZSBD_SOURCE_HTML_ENTITIES = ['&lt;', '&gt;', '&nbsp;&nbsp;&nbsp;'];
 
 
 
