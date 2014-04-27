@@ -467,6 +467,18 @@ var ZSB_APP_OPTIONS = {
 <script type="text/javascript" src="a/js/zoriginnerouterhtml.min.js"></script>
 <script type="text/javascript" src="a/js/zsbdemo.js"></script>
 
+<script type="text/javascript">
+document.write = function(STRING){
+	if (console.warn) {
+		console.warn(''+
+			'WARNING WARNING WARNING\n'+
+			'Ada penyusup yang ingin menyusupkan kode berikut ini ke dalam dokumen:\n'
+			''+STRING+''+
+		'');
+	}
+};
+</script>
+
 </body>
 </html>
 
