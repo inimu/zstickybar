@@ -202,7 +202,7 @@
 		<ul>
 			<li>
 				<div style="float: left; display: inline-block; width: auto;"><big>Dummy log in to <script>document.write(location.hostname);</script></big></div>
-				<a data-zsb-menu-toggler="" class="zsb-close-button" style="float: right;" title="Close"></a>
+				<a data-zsb-menubox-toggle="" class="zsb-close-button" style="float: right;" title="Close"></a>
 			</li>
 			<li>
 				<form id="login-form" onsubmit="zsbDemo.dummyLogin(); return false;">
@@ -238,7 +238,7 @@
 	</li>
 
 	<li>
-		<a id="zsb-bar-control-top"></a>
+		<a data-zsb-bar-hide=""></a>
 	</li>
 
 	<!-- TOP RIGHT CONTENT end -->
@@ -362,12 +362,12 @@
 		<a><i class="fa fa-comments"></i> Chat Box</a>
 		<ul>
 			<li>
-				<a data-zsb-menu-toggler="" data-zsb-win-open="''|'InimuCboxWin'|'width=500,height=500,resizable=yes'|'#inimu-cboxdiv'|'Chat Box %7C inimu.com'"
-					href="http://inimu.cbox.ws" style="float: left;" title="Open chat box in new window"><i class="fa fa-external-link-square"></i> Open chat box in new window</a>
-				<a data-zsb-menu-toggler="" class="zsb-close-button" style="float: right;" title="Close"></a>
+				<a data-zsb-menubox-toggle="" data-zsb-win-open="''|'InimuCboxWin'|'width=500,height=500,resizable=yes'|'#inimu-cboxdiv'|'Chat Box %7C inimu.com'"
+					href="http://inimu.cbox.ws" style="float: left; width: auto;" title="Open chat box in new window"><i class="fa fa-external-link-square"></i> Open chat box in new window</a>
+				<a data-zsb-menubox-toggle="" class="zsb-close-button" style="float: right; width: auto;" title="Close"></a>
 			</li>
 			<li>
-				<div id="inimu-cboxdiv" style="width: 360px; margin: 0 auto; background-color: #fff;">
+				<div id="inimu-cboxdiv" style="width: 360px;">
 					<iframe frameborder="0" width="100%" height="360" scrolling="auto"
 						src="http://www3.cbox.ws/box/?boxid=3212049&amp;boxtag=64kmp4&amp;sec=main" name="cboxmain" id="cboxmain"></iframe>
 					<iframe frameborder="0" width="100%" height="100" scrolling="no"
@@ -378,7 +378,7 @@
 	</li>
 
 	<li>
-		<a id="zsb-bar-control-bottom"></a>
+		<a data-zsb-bar-hide=""></a>
 	</li>
 
 	<!-- BOTTOM RIGHT CONTENT end -->
@@ -398,7 +398,6 @@ var ZSB_APP_OPTIONS = {
 	Wait_Until_Page_Loaded              : 'no',
 	Show_Message_On_Old_Browser         : 'yes',
 
-/*
 	//theme1(light_w_gradient)
 	Color_Theme                         : 'light',
 
@@ -431,7 +430,6 @@ var ZSB_APP_OPTIONS = {
 	Bottom_Bar_Border_Radius            : '10px 10px 0 0',
 	Bottom_Bar_Item_Vertical_Align      : 'top',
 	Bottom_Bar_Opacity                  : '0.5',
-*/
 
 /*
 	//theme2(darksimple)
@@ -439,6 +437,7 @@ var ZSB_APP_OPTIONS = {
 	Bar_Opacity                         : '0.5',
 */
 
+/*
 	//theme3(dark)
 	Color_Theme                         : 'dark',
 	Bar_Opacity                         : '0.65',
@@ -450,13 +449,14 @@ var ZSB_APP_OPTIONS = {
 	Bottom_Bar_Border_Radius            : '50px 50px 0 0',
 	Bottom_Bar_Item_Vertical_Align      : 'bottom',
 	Bottom_Bar_Link_Background_Color    : '#444',
+*/
 
 	/* OPTIONS end */
 	zsbOptEnd:true
 }
 </script>
 <script id="zsb-jquery" type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script id="zsb-app" type="text/javascript" src="http://inimu.github.io//zstickybar/js/zstickybar.min.js"></script>
+<script id="zsb-app" type="text/javascript" src="http://inimu.github.io/zstickybar/js/zstickybar.min.js"></script>
 <!-- -------------------------------------------------- --+
      Do not modify anything other than contents/options
 +--- ~~~~~~~~~~~~~~~~~~~ zStickyBar ~~~~~~~~~~~~~~~~~~~ -->
