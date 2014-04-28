@@ -53,6 +53,18 @@
 		</footer>
 		<!--[if !IE]><script>fixScale(document);</script><![endif]-->
 
+<script type="text/javascript">
+document.write = function(STRING){
+	if (console.warn) {
+		console.warn(''+
+			'--- WARNING ---\n'+
+			'An intruder attempted to write the following code:\n'+
+			''+STRING+''+
+		'');
+	}
+};
+</script>
+
 	</body>
 </html>
 

@@ -387,7 +387,7 @@
 <a id="zsb-bootnode" href="http://inimu.com/widget/zstickybar">zStickyBar Widget by inimu.com</a>
 </div>
 <script id="zsb-option" type="text/javascript">
-var ZSB_APP_OPTIONS = {
+var zsb_App_Options = {
 	/* OPTIONS begin */
 
 	Facebook_URL_ID                     : 'inimucom',
@@ -452,7 +452,7 @@ var ZSB_APP_OPTIONS = {
 */
 
 	/* OPTIONS end */
-	zsbOptEnd:true
+	zsbOptsEnd:true
 }
 </script>
 <script id="zsb-jquery" type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -471,8 +471,8 @@ var ZSB_APP_OPTIONS = {
 document.write = function(STRING){
 	if (console.warn) {
 		console.warn(''+
-			'WARNING WARNING WARNING\n'+
-			'Ada penyusup yang ingin menyusupkan kode berikut ini ke dalam dokumen:\n'+
+			'--- WARNING ---\n'+
+			'An intruder attempted to write the following code:\n'+
 			''+STRING+''+
 		'');
 	}

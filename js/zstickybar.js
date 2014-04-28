@@ -78,8 +78,17 @@ var zStickyBar = (function($) {
 	}
 
 	function zsb_checkId(ID) {
+		if (! ID) { return false; }
 		try {
 			return Boolean(DOC.getElementById(ID).nodeType === 1);
+		} catch(e) {
+			return false;
+		}
+	}
+	function zsb_checkElement(ELEMENT) {
+		if (! ELEMENT) { return false; }
+		try {
+			return Boolean(ELEMENT.nodeType === 1);
 		} catch(e) {
 			return false;
 		}
@@ -109,6 +118,30 @@ var zStickyBar = (function($) {
 		if (MEDIA) { CSSNODE.setAttribute('media',MEDIA); }
 		CSSNODE.href = URL;
 		HEAD.appendChild(CSSNODE);
+	}
+
+	function zsb_DeleteEdgeQuotes(STRING) {
+		var REXPSQA = new RegExp('^'+S+''), REXPSQB = new RegExp(''+S+'$');
+		var REXPDQA = new RegExp('^'+Q+''), REXPDQB = new RegExp(''+Q+'$');
+		return STRING.replace(REXPSQA,'').replace(REXPSQB,'').replace(REXPDQA,'').replace(REXPDQB,'');
+	}
+
+	function zsb_insertHTML(TARGETELEMENT,CONTENT,REMOVE) {
+		var TARGETELEMENT = TARGETELEMENT || '';
+		var TARGETID = (typeof TARGETELEMENT === 'string') ? TARGETELEMENT.replace(/^#/,'') : '';
+		var CONTENT = CONTENT || '', REMOVE = REMOVE || false;
+		var CODE, CONTENTID = CONTENT.replace(/^#/,'');
+		TARGETELEMENT = (zsb_checkElement(TARGETELEMENT)) ? TARGETELEMENT : (zsb_checkId(TARGETID)) ? DOC.getElementById(TARGETID) : '';
+		if ( (! TARGETELEMENT) || (! CONTENT) ) { return; }
+		try {
+			CODE = document.getElementById(CONTENTID).innerHTML;
+		} catch(e) {
+			CODE = CONTENT;
+		}
+		$(TARGETELEMENT).append(''+CODE+'');
+		if ( (REMOVE) && zsb_checkId(CONTENTID) ) {
+			$('#'+CONTENTID+'').remove();
+		}
 	}
 
 	function zsb_openWindow(WINURL,WINNAME,WINOPT,WINCONTENT,WINTITLE) {
@@ -1666,11 +1699,6 @@ var zStickyBar = (function($) {
 	/* WINDOWOPEN */
 	function zsb_setEventOpenWindow() {
 		var TARGETVAL, HREFVAL, ARGVAL, ARGS, URL, NAME, OPT, CONTENT, TITLE;
-		function zsbDelEdgeQuote(STRING) {
-			var REXPSQA = new RegExp('^'+S+''), REXPSQB = new RegExp(''+S+'$');
-			var REXPDQA = new RegExp('^'+Q+''), REXPDQB = new RegExp(''+Q+'$');
-			return STRING.replace(REXPSQA,'').replace(REXPSQB,'').replace(REXPDQA,'').replace(REXPDQB,'');
-		}
 		$('*[data-zsb-win-open]').on('click',function(e){
 			e.preventDefault();
 			TARGETVAL = $(this).attr('target') || '';
@@ -1683,16 +1711,34 @@ var zStickyBar = (function($) {
 				OPT = ARGS[2] || '';
 				CONTENT = ARGS[3] || '';
 				TITLE = ARGS[4] || '';
-				if (URL) { URL = zsbDelEdgeQuote(URL); if (URL === 'this.href') { URL = HREFVAL; } else if (URL === 'about:blank') { URL = ''; } }
-				if (NAME) { NAME = zsbDelEdgeQuote(NAME); if (NAME === '_blank') { NAME = ''; } }
-				if (OPT) { OPT = zsbDelEdgeQuote(OPT); }
-				if (CONTENT) { CONTENT = zsbDelEdgeQuote(CONTENT); CONTENT = unescape(CONTENT); URL = ''; }
-				if (TITLE) { TITLE = zsbDelEdgeQuote(TITLE); TITLE = unescape(TITLE); }
+				if (URL) { URL = zsb_DeleteEdgeQuotes(URL); if (URL === 'this.href') { URL = HREFVAL; } else if (URL === 'about:blank') { URL = ''; } }
+				if (NAME) { NAME = zsb_DeleteEdgeQuotes(NAME); if (NAME === '_blank') { NAME = ''; } }
+				if (OPT) { OPT = zsb_DeleteEdgeQuotes(OPT); }
+				if (CONTENT) { CONTENT = zsb_DeleteEdgeQuotes(CONTENT); CONTENT = unescape(CONTENT); URL = ''; }
+				if (TITLE) { TITLE = zsb_DeleteEdgeQuotes(TITLE); TITLE = unescape(TITLE); }
 			} else {
 				URL = ''; NAME = ''; OPT = ''; CONTENT = ''; TITLE = '';
 			}
 			zsb_openWindow(URL,NAME,OPT,CONTENT,TITLE);
 			return false;
+		});
+	}
+
+	/* ELEMENTHTML */
+	function zsb_setupElementHTML() {
+		var ARGVAL, ARGS, CONTENT, REMOVE;
+		$('*[data-zsb-html-insert]').each(function() {
+			ARGVAL = $(this).attr('data-zsb-html-insert') || '';
+			ARGS = ARGVAL.split(',') || [];
+			if (ARGS.length < 1) { return; }
+			CONTENT = ARGS[0] || '';
+			REMOVE = ARGS[1] || '';
+			if (CONTENT) {
+				CONTENT = zsb_DeleteEdgeQuotes(CONTENT);
+				REMOVE = zsb_DeleteEdgeQuotes(REMOVE);
+				REMOVE = Boolean(REMOVE === true || REMOVE === 'true' || REMOVE === 'yes');
+				zsb_insertHTML($(this)[0],CONTENT,REMOVE)
+			}
 		});
 	}
 
@@ -1725,6 +1771,7 @@ var zStickyBar = (function($) {
 		if (! zsb_checkId('zsb-style')) { return; }
 
 		zsb_setupCSSText(ZSB_OPTION_CSS_TEXT,'zsb-style-option');
+		zsb_setupElementHTML();
 		zsb_setupFollowbox();
 		zsb_setupScrollbox();
 		$('#zsb-followbox,#zsb-scrollbox').addClass('zsb-transparent');
@@ -1788,7 +1835,7 @@ var zStickyBar = (function($) {
 
 		zsb_setClassNameInitStyle();
 
-		try { var ZSBAO = ZSB_APP_OPTIONS; } catch(e) { var ZSBAO = {}; }
+		try { var ZSBAO = zsb_App_Options; } catch(e) { var ZSBAO = {}; }
 		zsb_parsePathOption(ZSBAO);
 		if (! zsb_checkId('zsb-style-fa')) { zsb_setupCSSLink('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css','zsb-style-fa'); }
 		if (! zsb_checkId('zsb-style-ubuntu')) { zsb_setupCSSLink('//fonts.googleapis.com/css?family=Ubuntu','zsb-style-ubuntu'); }
@@ -1807,10 +1854,12 @@ var zStickyBar = (function($) {
 
 		getId: zsb_getId,
 		checkId: zsb_checkId,
+		checkElement: zsb_checkElement,
 
 		setupCSSLink: zsb_setupCSSLink,
 		setupCSSText: zsb_setupCSSText,
 
+		insertHTML: zsb_insertHTML,
 		openWindow: zsb_openWindow,
 
 		showUpgradebox: zsb_showUpgradebox,
@@ -1877,7 +1926,7 @@ var zsb = zsb || zStickyBar;
 		cID('zsb-contentbox-bottom-right') &&
 		cID('zsb-bootnode')
 		) {
-		try { ZSBAO = ZSB_APP_OPTIONS; } catch(e) { }
+		try { ZSBAO = zsb_App_Options; } catch(e) { }
 		zStickyBar.start(ZSBAO);
 		zStickyBar.executed = true;
 	}
