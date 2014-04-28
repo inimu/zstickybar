@@ -1771,12 +1771,12 @@ var zStickyBar = (function($) {
 		if (! zsb_checkId('zsb-style')) { return; }
 
 		zsb_setupCSSText(ZSB_OPTION_CSS_TEXT,'zsb-style-option');
-		zsb_setupElementHTML();
 		zsb_setupFollowbox();
 		zsb_setupScrollbox();
 		$('#zsb-followbox,#zsb-scrollbox').addClass('zsb-transparent');
 
 		function zsbRunOnDOMReady() {
+			zsb_setupElementHTML();
 			zsb_setupContentboxMenuboxMenu();
 			zsb_setupBarButton();
 			zsb_showWrapper();
